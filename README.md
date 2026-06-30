@@ -28,7 +28,10 @@ The GitHub REST API allows **60 requests/hour** without authentication. To incre
 
 ## 🚀 Live Demo
 
-🟢 https://arjundroid12.github.io/github-user-search/
+| Host | URL | Notes |
+|------|-----|-------|
+| 🥇 Surge.sh | https://arjun-gh-search.surge.sh | Bangalore edge — best for India |
+| 🥈 GitHub Pages | https://arjundroid12.github.io/github-user-search/ | May be blocked by some Indian ISPs |
 
 ## 📦 Run Locally
 
