@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub User Search</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+<main class="app">
+  <header class="app__header">
+    <h1>🐙 GitHub User Search</h1>
+    <button id="themeToggle" class="icon-btn" type="button">🌙</button>
+  </header>
+
+  <form id="searchForm" class="search">
+    <input id="usernameInput" type="search" placeholder="Enter GitHub username..." autocomplete="off">
+    <button type="submit">Search</button>
+  </form>
+
+  <div id="rateLimit" class="rate-limit" hidden></div>
+  <div id="loading" class="loading" hidden>Fetching profile...</div>
+  <div id="error" class="error" hidden></div>
+
+  <div id="profile" class="profile" hidden>
+    <div class="profile__header">
+      <img id="avatar" class="profile__avatar" src="" alt="">
+      <div class="profile__info">
+        <h2 id="name" class="profile__name">—</h2>
+        <p id="login" class="profile__login">@—</p>
+        <p id="bio" class="profile__bio">—</p>
+        <div class="profile__meta">
+          <span id="location">📍 —</span>
+          <span id="company">🏢 —</span>
+          <span id="blog">🔗 —</span>
+          <span id="joined">📅 —</span>
+        </div>
+        <div class="profile__stats">
+          <div class="stat"><strong id="repos">—</strong><span>repos</span></div>
+          <div class="stat"><strong id="followers">—</strong><span>followers</span></div>
+          <div class="stat"><strong id="following">—</strong><span>following</span></div>
+          <div class="stat"><strong id="gists">—</strong><span>gists</span></div>
+        </div>
+      </div>
+    </div>
+    <h3 class="repos-title">Top repositories (by stars)</h3>
+    <div id="reposList" class="repos-list"></div>
+  </div>
+
+  <div id="recent" class="recent" hidden>
+    <h3>Recent searches</h3>
+    <div id="recentList" class="recent__list"></div>
+  </div>
+</main>
+<script src="./assets/app.js"></script>
+</body>
+</html>
